@@ -26,4 +26,4 @@
 // console.log(undefined<=0)//false
 
 console.log("2"==2);//true
-console.log("2"===2);//strict check, no satatype conversion//false
+console.log("2"===2);//strict check, no datatype conversion//false
