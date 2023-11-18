@@ -1,0 +1,20 @@
+nav{
+    /* height: 50px; */
+    background-color: rgb(145, 142, 142);
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    justify-content: center;
+}
+a{
+    background-color: rgb(106, 99, 99);
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+}
