@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: #212121;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        h3{
+            color: white;
+        }
+        .card{
+            /* height: 300px; */
+            width: 350px;
+            /* background-color: pink; */
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        #submit{
+            border-radius: 5px;
+            background-color: blue;
+            border: none;
+        }
+        img{
+            margin-top: 5px;
+            height: 125px;
+            width: 125px;
+            border-radius: 100px;
+        }
+        #bio{
+            text-align: center;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        input{
+            height: 25px;
+            border-radius: 10px;
+            padding-left: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+    <!-- 0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+        <h3>Enter your github user ID</h3>
+        <input type="text" id="input">
+        <button id="submit">Submit</button>
+        <div class="card">
+            
+        </div>
+</body>
+<script>
+    const input=document.getElementById('input')
+    const submit=document.getElementById('submit')
+    const card=document.querySelector(".card")
+
+    submit.addEventListener('click',function(e){
+        e.preventDefault()
+        const inputUsername=String(input.value)
+        // console.log(inputUsername);
+
+        restwork(inputUsername)
+    })
+    function restwork(inputUsername){
+        const requestUrl = `https://api.github.com/users/${inputUsername}`    
+    
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl)
+        xhr.onreadystatechange = function(){
+            // console.log(xhr.readyState);
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText)
+                console.log(typeof data);
+                console.log(data);
+                printcard(data)
+            }
+        }
+        xhr.send();
+    }
+
+    function printcard(data){
+        card.style.backgroundColor="pink"
+        card.innerHTML=`
+            <img src=${data.avatar_url} alt="avatar">
+            <div id="name">${data.name}</div>
+            <div id="bio">${data.bio}</div>
+            <div id="follower">Followers: ${data.followers}</div>
+        `
+    }
+    
+</script>
+</html>
