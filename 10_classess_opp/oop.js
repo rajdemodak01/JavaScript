@@ -26,15 +26,23 @@ function User(userName,logInCount,isLoggedIn){
     this.logInCount=logInCount
     this.isLoggedIn=isLoggedIn
 
+    this.grettings=function(){
+        console.log(`Welcome ${this.userName}`);
+    }
+
     return this
 }
 
 const userOne=new User("Raj",12,true)
 const userTwo=new User("Raj De Modak",5,false)
-console.log(userOne);
-console.log(userTwo);
+// console.log(userOne);
+console.log(userOne.constructor);
+// console.log(userTwo);
+console.log(userTwo instanceof User);//true
 
 //new keyword
 //step 1. new object is created
 //step 2.constractor function call
 //strp 3. this injected all this
+
+//JavaScript's behaviour is Prototypal behaviour
