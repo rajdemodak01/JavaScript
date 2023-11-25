@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and Show Password</title>
+    <style>
+    
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .input-container{
+            height: 8%;
+            width: 20%;
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 50px;
+        }
+        #password-input{
+            width: 100%;
+            /* padding: 10px; */
+            border: 0;
+            outline: 0;
+            text-decoration: none;
+            background-color: aqua;
+            font-size: 15px;
+
+            /* margin-right: 5px; */
+        }
+        img{
+            /* display: block; */
+            /* margin: 0 auto 10px;  */
+            width: 35px;
+            cursor: pointer;
+        }
+        ::-ms-reveal{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <input type="password" name="" id="password-input" placeholder="Password">
+        <img src="visibility.png" alt="" id="show-password">        
+    </div>
+</body>
+<script>
+    const password=document.querySelector("#password-input");
+    const eyeicon=document.querySelector("#show-password");
+    eyeicon.addEventListener('click', function(e){
+        if(password.type=="password"){
+            eyeicon.src="visibility.png"
+            password.type="text";
+        }else{
+            eyeicon.src="visibility_off.png"
+            password.type="password";
+        }
+    })
+</script>
+</html>

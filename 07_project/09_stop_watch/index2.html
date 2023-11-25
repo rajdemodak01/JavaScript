@@ -85,10 +85,10 @@
             <div class="content3"></div>
         </div>
     </div>
-    <button id="reset">Reset</button>
+    
     <div class="buttons">
         <button id="start">Start</button>
-        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
     </div>
     
 </body>
@@ -105,14 +105,16 @@
     let intervalID;
     let clickEnabled = true;
 
+    let second = 0;
+    let minute = 0;
+    let hour = 0;
     function startTimer() {
         if (!clickEnabled) {
+            stopTimer()
             return
         }
+        start.innerHTML="Stop"
         clickEnabled = false;
-        let second = 0;
-        let minute = 0;
-        let hour = 0;
 
         intervalID = setInterval(() => {
             second += 1;
@@ -131,20 +133,25 @@
         // document.querySelector('#start').removeEventListener('click', arguments.callee);
         // document.querySelector('#start').addEventListener('click',startTimer);
     }
-
+    
     const stopTimer = function () {
+        start.innerHTML="Start"
         clickEnabled = true;
         clearInterval(intervalID);
         intervalID = null; //dereferencing the variable
     };
-
+    
     document.querySelector('#start').addEventListener('click',startTimer);
-    document.querySelector('#stop').addEventListener('click',stopTimer);
-
+    // document.querySelector('#stop').addEventListener('click',stopTimer);
+    
     reset.addEventListener('click',function(e){
+        second = 0;
+        minute = 0;
+        hour = 0;
         content3.innerHTML = `00`;
         content2.innerHTML = `00`;
         content1.innerHTML = `00`;
+        start.innerHTML="Start"
         clickEnabled = true;
         clearInterval(intervalID);
         intervalID = null; //dereferencing the variable
