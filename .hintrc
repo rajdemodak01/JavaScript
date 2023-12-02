@@ -15,6 +15,8 @@
       {
         "image-alt": "off"
       }
-    ]
+    ],
+    "no-inline-styles": "off",
+    "button-type": "off"
   }
 }
