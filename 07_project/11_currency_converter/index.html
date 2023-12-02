@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            height: auto;
+            width: auto;
+            background-color: aqua;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            border-radius: 5px;
+        }
+        .firstcurrency, .secondcurrency{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        #input{
+            height: 25px;
+            width: 175px;
+            border-radius: 4px;
+            border: none;
+            background-color: beige;
+            /* color: white; */
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif   ;
+        }
+        #input::placeholder{
+            padding-left: 5px;
+        }
+        #answer{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            height: 25px;
+            border-radius: 4px;
+            width: 175px;
+            background-color: burlywood;
+            display: flex;
+            align-items: center;
+            margin-left: 0;
+            padding-left: 7px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="firstcurrency">
+            <input type="text" placeholder="Enter the Currency" id="input">
+            <label for="dropdown">Choose an option:</label>
+            
+            <select id="dropdown1" name="dropdown">
+                <option value="rupee">Rupee</option>
+                <option value="dollar">Dollar</option>
+                <option value="euro">Euro</option>
+            </select>
+        </div>
+        <div class="secondcurrency">
+            <div id="answer"></div>
+            <label for="dropdown2">Choose an option:</label>
+            <select id="dropdown2" name="dropdown">
+                <option value="rupee">Rupee</option>
+                <option value="dollar">Dollar</option>
+                <option value="euro">Euro</option>   
+            </select>
+        </div>
+    </div>
+</body>
+<script>
+    let currency1 = "rupee";
+    let currency2 = "rupee";
+    
+    let value1=Number.MIN_SAFE_INTEGER;
+    
+    const input=document.getElementById('input')
+    const answer = document.getElementById('answer');
+    const dropdown1 = document.getElementById('dropdown1');
+    const dropdown2 = document.getElementById('dropdown2');
+
+    dropdown1.addEventListener('change', (e) => {
+        e.preventDefault();
+        currency1 = dropdown1.value;
+        updateAnswer();
+    });
+
+    dropdown2.addEventListener('change', (e) => {
+        e.preventDefault();
+        currency2 = dropdown2.value;
+        updateAnswer();
+    });
+
+    input.addEventListener('change',(e)=>{
+        e.preventDefault();
+        value1=input.value
+        updateAnswer();
+    })
+    
+    function updateAnswer() {
+        if (value1!=Number.MIN_SAFE_INTEGER) {
+            if ((currency1=="rupee" && currency2=="rupee") || (currency1=="dollar" && currency2=="dollar") || (currency1=="euro" && currency2=="euro")) {
+                answer.innerHTML = `${value1}`;
+            }else if (currency1=="rupee" && currency2=="dollar") {
+                answer.innerHTML = `${value1/83.34}`;
+            }else if (currency1=="rupee" && currency2=="euro") {
+                answer.innerHTML = `${value1/91.47}`;
+            }else if (currency1=="dollar" && currency2=="rupee") {
+                answer.innerHTML = `${value1*83.34}`;
+            }else if (currency1=="dollar" && currency2=="euro") {
+                answer.innerHTML = `${value1*0.91}`;
+            }else if (currency1=="euro" && currency2=="rupee") {
+                answer.innerHTML = `${value1*91.47}`;
+            }else if (currency1=="euro" && currency2=="dollar") {
+                answer.innerHTML = `${value1*1.10}`;
+            }
+        }
+        else{
+            answer.innerHTML = "Enter a number in the input";
+        }
+    }
+
+    updateAnswer();
+</script>
+</html>
