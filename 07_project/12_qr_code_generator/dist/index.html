@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link href="output.css" rel="stylesheet">
+    <style>
+    .submit {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.submit:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.submit:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.submit:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+
+#input{
+  width: 100%;
+  color: rgb(36, 35, 42);
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 28px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+  background: rgb(251, 251, 251);
+  transition: all 0.1s ease 0s;
+  :focus{
+      border: 2px solid rgb(124, 138, 255);
+  }
+
+}
+
+#container{
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300); 
+
+body{
+	font-family: 'Nunito', sans-serif;
+}
+	.download{
+		text-transform: uppercase;
+		color: #fff;
+		border: 2px solid #4476fb;
+		display: inline-block;
+		padding: 5px;
+		padding-right: 15px;
+		padding-left: 15px;
+		border-radius: 3px;
+		cursor: pointer;
+		overflow: hidden;
+		box-sizing: border-box;
+		font-size:14px;
+		transition: all .3s ease;
+        /* visibility: hidden; */
+		&:hover{
+			background-color: #4476fb;
+			color: #060e33;
+		}
+	}
+
+    </style>
+</head>
+<body class="h-screen flex justify-center items-center">
+    <div class="flex justify-center gap-3 items-center flex-col  bg-slate-400 border-1 border-black rounded-lg p-4" id="container">
+        <input type="text" placeholder="Type the URL"  id="input">
+        <button class="submit" role="button">Submit</button>    
+        <div class="border-8 rounded-lg border-blue-700" id="qrcode"></div>
+        <div class="download">
+            <a target="_parent" download="raj.jpg">Download</a>
+        </div>
+        
+    </div>
+</body>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<script src="script.js"></script>
+</html>
+
