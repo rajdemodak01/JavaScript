@@ -3,7 +3,6 @@ const insert = document.getElementById('insert');
 window.addEventListener('keydown', function(e){
   
   e.preventDefault()
-  console.log("yessss");
   insert.innerHTML = `
     <div class='color'>
       <table>

@@ -47,3 +47,7 @@ This repo contains JavaScript topics.
 ## 11Project-Currency Converter
 
 <https://rajdemodak01.github.io/JavaScript/07_project/11_currency_converter/index.html>
+
+## 12Project-QR Code Generator
+
+<https://rajdemodak01.github.io/JavaScript/07_project/12_qr_code_generator/index.html>
