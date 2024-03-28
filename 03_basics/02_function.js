@@ -28,7 +28,7 @@ const myNewArray=[200,1500,4800]
 function returnSecondValue(getArray){
     return getArray[1] 
 }
-console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([100,2,0,500]));
+console.log(returnSecondValue(myNewArray));//1500
+console.log(returnSecondValue([100,2,0,500]));//2
 
 

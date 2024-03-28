@@ -25,7 +25,7 @@ function add2Number(num1,num2){//num1 and num2 are parameters
 }
 let a=3,b=5;
 const result2=add2Number(a,b);
-// console.log(`sum of ${a} and ${b} is ${result2}`);//undefined
+// console.log(`sum of ${a} and ${b} is ${result2}`);
 
 function logInUserMessage(username){
     if (username===undefined) {
@@ -45,4 +45,4 @@ function logInUserMessage2(username="Shyam"){//default parammeter
     return `${username} just logged in`
 }
 console.log(logInUserMessage2("Raj"));//Raj just logged in
-console.log(logInUserMessage2());
+console.log(logInUserMessage2());//Shyam just logged in

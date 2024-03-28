@@ -19,7 +19,7 @@ const regularUser={
 
 const obj1={1:"a",2:"b"}
 const obj2={3:"a",4:"b"}
-// const obj3={obj1,obj2}//make obbject within object
+// const obj3={obj1,obj2}//make object within object
 // const obj3=Object.assign(obj1,obj2)//this will also change obj//syntax is (target,source)
 // console.log(obj1);
 // console.log(obj3);

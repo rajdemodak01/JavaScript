@@ -1,4 +1,4 @@
-//songleton
+//singleton
 //object.create//this is called constructor method//using this it create singleton
 
 //object literals
@@ -48,12 +48,12 @@ const JsUser={
   } */
 
 JsUser.greeting=function(){
-    console.log("Hello JS user");
+    console.log("Hello JS user");//Hello JS user
 }
-console.log((JsUser.greeting()));
+console.log((JsUser.greeting()));//undefined
 
 
 JsUser.greetingTwo=function(){
-    console.log(`Hello JS user, ${this.name}`);
+    console.log(`Hello JS user, ${this.name}`);//Hello JS user, Raj
 }
-console.log((JsUser.greetingTwo()));
+console.log((JsUser.greetingTwo()));//undefined

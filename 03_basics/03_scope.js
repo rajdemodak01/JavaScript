@@ -43,7 +43,7 @@ addOne(5)
 function addOne(num ) {
     return num+1
 }
-addTwo()//will give error
+// addTwo()//will give error//ReferenceError: Cannot access 'addTwo' before initialization
 const addTwo=function(num){
     return num+2
 }

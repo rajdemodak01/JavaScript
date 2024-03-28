@@ -5,7 +5,9 @@ const myNums = [1, 2, 3]
 //     return acc + currval
 // }, 0)
 
-const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)
+const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)//0+1+2+3=6
+//syntax--> const var_name=arr.reduce(function,0)//0 means the starting value of acc=0
+//if we put 5 instead of 0, answer will be 11//5+1+2+3
 
 console.log(myTotal);
 

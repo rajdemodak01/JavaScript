@@ -36,7 +36,6 @@ for (let index = 0; index < myArray.length; index++) {
 //         break
 //     }
 //    console.log(`Value of i is ${index}`);
-    
 // }
 
 for (let index = 1; index <= 20; index++) {
@@ -44,6 +43,5 @@ for (let index = 1; index <= 20; index++) {
         console.log(`Detected 5`);
         continue
     }
-   console.log(`Value of i is ${index}`);
-    
+   console.log(`Value of i is ${index}`);//will be skipped when index==5
 }
