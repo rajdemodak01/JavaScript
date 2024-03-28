@@ -4,7 +4,7 @@ var accountPassword="12345"
 accountCity="Kolkata"
 
 // accountId=2
-//this is not allowed
+//this is not allowed(as we can't change a const)
 console.log(accountId);
 
 accountEmail="rakk@gmail.com"

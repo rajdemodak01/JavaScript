@@ -1,10 +1,10 @@
 "use strict" // treat all JS code as newer version
 
-// alert(3+3) //We are using nodeJS, not browser
+// alert(3+3) //We are using nodeJS, not browser so this will not execute in local terminal
 
 console.log(3
     +
-    3) //code readability should be high
+    3) //not preferred //code readability should be high
 
 console.log(3+3);
 console.log("Raj");
