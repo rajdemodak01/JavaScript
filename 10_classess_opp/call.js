@@ -6,8 +6,8 @@ function SetUserName(username){
 
 function createUser(username,email,password){
     // SetUserName(username)//will not calll SetUserName function
-    SetUserName.call(username)//SetUserName is being called but as we are not using this, it will not return or set anything
-    SetUserName.call(this,username)//call is used tto hold the reference
+    // SetUserName.call(username)//SetUserName is being called but as we are not using this, it will not return or set anything
+    SetUserName.call(this,username)//call is used to hold the reference
 
     this.email=email
     this.password=password

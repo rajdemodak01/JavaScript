@@ -19,7 +19,7 @@ const startChangingColor=function(){
 
 const stopChangingColor=function(){
     clearInterval(intervalID)
-    intervalID=null//dereferancing the variable
+    intervalID=null//dereferancing the variable//Flushing out the value of intervalId//Better practice
 }
 
 document.querySelector('#start').addEventListener('click',startChangingColor);

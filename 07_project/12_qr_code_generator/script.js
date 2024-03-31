@@ -37,6 +37,7 @@ function generateQRCode() {
 
 window.addEventListener('keydown', function(e) {
     if (e.key === 'Enter') {
+        e.preventDefault();
         generateQRCode();
     }
 }, true);

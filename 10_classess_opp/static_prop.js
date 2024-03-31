@@ -23,4 +23,4 @@ class Teacher extends User{
 
 const raj2=new Teacher("Raj De Modak","raj@gmail.com")
 raj2.logMe()
-raj2.createId()//will give error//will give error as "Static" is used
+raj2.createId()//will give error as "Static" is used

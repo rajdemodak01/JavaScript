@@ -24,7 +24,7 @@ Array.prototype.heyRaj=function(){
 // HeroPower.heyRaj()//will give error because we are injecting protopyte to array not object
 
 
-/*Inheritense*/
+/*Prototypal Inheritence*/
 
 const user={
     name: "Raj De Modak",
@@ -56,7 +56,7 @@ let anotherUserName="Raj   "
 
 String.prototype.truelength=function(){
     // console.log(`${this}`);//"Raj   "
-    // console.log(`${this.name}`);//undefined
+    // console.log(`${this.name}`);//undefined//because we did'nt defined anything named name
     
     // let anotherName=(this).trim()
     // console.log(anotherName.length);

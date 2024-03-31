@@ -53,11 +53,6 @@
         }
     </style>
 </head>
-    <!-- 0	UNSENT	Client has been created. open() not called yet.
-1	OPENED	open() has been called.
-2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
-3	LOADING	Downloading; responseText holds partial data.
-4	DONE	The operation is complete. -->
         <h3>Enter your github user ID</h3>
         <input type="text" id="input">
         <button id="submit">Submit</button>
@@ -66,6 +61,14 @@
         </div>
 </body>
 <script>
+//Statius of the sent request
+// value    State                       Description
+// 0	    UNSENT      	    Client has been created. open() not called yet.
+// 1	    OPENED	            open() has been called.
+// 2	    HEADERS_RECEIVED	send() has been called, and headers and status are available.
+// 3	    LOADING	            Downloading; responseText holds partial data.
+// 4	    DONE	            The operation is complete.
+    
     const input=document.getElementById('input')
     const submit=document.getElementById('submit')
     const card=document.querySelector(".card")

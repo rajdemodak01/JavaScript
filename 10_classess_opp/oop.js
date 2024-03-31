@@ -17,7 +17,7 @@ const user={
 // console.log(this);//{}//If we try to print this in console in browser then there will be a obbject full of methods and properties
 
 
-// const promiseOne=new Promise()//new is a consttractor function
+// const promiseOne=new Promise()//new is a constractor function
 // const date=new Date()
 
 
@@ -30,13 +30,13 @@ function User(userName,logInCount,isLoggedIn){
         console.log(`Welcome ${this.userName}`);
     }
 
-    return this
+    return this//we can also don't write this as it return this implicitly
 }
 
 const userOne=new User("Raj",12,true)
-const userTwo=new User("Raj De Modak",5,false)
+const userTwo=new User("Raj De Modak",5,false)//if we don't use new everytime it will overwrite the previous object 
 // console.log(userOne);
-console.log(userOne.constructor);
+console.log(userOne.constructor);//[function: User]//reference to/of itself
 // console.log(userTwo);
 console.log(userTwo instanceof User);//true
 

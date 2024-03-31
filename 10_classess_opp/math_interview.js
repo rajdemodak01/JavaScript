@@ -20,18 +20,18 @@ const chai={
         console.log('Chai nahi bani');
     }
 }
-// console.log(Object.getOwnPropertyDescriptor(chai, "name"));
+console.log(Object.getOwnPropertyDescriptor(chai, "name"));
 // console.log(chai);
 
-// Object.defineProperty(chai, "name",{
-//     writable: false,
-//     enumerable:false
-// })
-// console.log(Object.getOwnPropertyDescriptor(chai, "name"));
+Object.defineProperty(chai, "name",{
+    writable: false,
+    enumerable:false
+})
+console.log(Object.getOwnPropertyDescriptor(chai, "name"));
 
 for (let [key,value] of Object.entries(chai)) {
     if (typeof value !=='function') {
-        console.log(`${key}:${value}`);
+        console.log(`${key}:${value}`);//will not print name:'ginger=chai' if enumerable if false. will print if True
     }
 }
 

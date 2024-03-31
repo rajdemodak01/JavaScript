@@ -50,19 +50,19 @@
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
     //     e.stopPropagation()
-    //     console.log("google clicked");
+    //     console.log("google clicked");//No bubbling here and bubblling is prevented using e.stopPropagation()
     // }, false)
    
-    
+    //when click an image remove the image
     document.querySelector('#images').addEventListener('click', function(e){
         console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
+        if (e.target.tagName === 'IMG') {//we are checking if tagName is IMG or not because if we clink any listitem other tham IMg the the parent of that listitem will be <ul> and whole <ul> will be removed. which is a problem.  We want to remove that listitem only which are of IMG type
             console.log(e.target.id);
             let removeIt = e.target.parentNode
             removeIt.remove()
+            //another way to remove
+            //removeIt.parentNode.removeChild(removeIt)
         }        
     },false)
-    
-    //removeIt.parentNode.removeChild(removeIt)
 </script>
 </html>

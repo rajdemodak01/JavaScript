@@ -25,6 +25,7 @@
           "-webkit-text-size-adjust"
         ]
       }
-    ]
+    ],
+    "meta-viewport": "off"
   }
 }

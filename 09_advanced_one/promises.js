@@ -41,7 +41,7 @@ promiseThree.then(function(user){
 //             resolve({username:"Raj",email:"raj@gmail.com"})
 //         }
 //         else{
-//             reject("errror:Something wennt wrong")
+//             reject("errror:Something went wrong")
 //         }
 //     },2000)
 // })
@@ -87,7 +87,7 @@ promiseThree.then(function(user){
 //     try {
 //         const response=await fetch('https://jsonplaceholder.typicode.com/users')
 //         // console.log(response);
-//         const data=await response.json()
+//         const data=await response.json()//we are also using await here, because we need to wait to convert resonse to json(so we use wait with every object/function for which we need to wait)
 //         console.log(data);
 //     } catch (error) {
 //         console.log("Error occured",error);
@@ -96,6 +96,7 @@ promiseThree.then(function(user){
 // getAllUsers()
 
 
+//this fetch will be executed first and then the PromiseOne/PromiseTwo/PromiseThree/PromiseFour/PromiseFive(Even if these are written above fetch) because fetch call goes to Multitask/promise queue through web API but all other functions(PromiseOne/PromiseTwo/PromiseThree/PromiseFour/PromiseFive) goes to task Queue through Web API. As multitask/promise queue has a higher proiority than task queue, fetch will be executed first
 fetch("https://jsonplaceholder.typicode.com/users").then(function(response){
     return response.json()
 })

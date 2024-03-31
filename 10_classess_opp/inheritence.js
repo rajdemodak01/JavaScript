@@ -29,5 +29,5 @@ const Raj=new User("raj de modak")
 Raj.logMe()
 
 console.log(raj === Teacher);//false
-console.log(raj instanceof Teacher);//true
-console.log(raj instanceof User);//true
+console.log(raj instanceof Teacher);//true(raj is a instanceof Teacher)
+console.log(raj instanceof User);//true(raj is a instanceof User)

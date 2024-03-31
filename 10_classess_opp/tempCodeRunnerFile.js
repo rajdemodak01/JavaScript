@@ -1,4 +1,8 @@
-constructor(email,password){
-    //     // this._email=email
-    //     // this._password=password
-    // }
+console.log(Object.getOwnPropertyDescriptor(chai, "name"));
+console.log(chai);
+
+Object.defineProperty(chai, "name",{
+    writable: false,
+    enumerable:false
+})
+console.log(Object.getOwnPropertyDescriptor(chai, "name"));
