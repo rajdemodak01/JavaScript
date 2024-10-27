@@ -50,10 +50,16 @@ const JsUser={
 JsUser.greeting=function(){
     console.log("Hello JS user");//Hello JS user
 }
-console.log((JsUser.greeting()));//undefined
+console.log((JsUser.greeting()));
+    //output-
+    /*Hello JS user
+    undefined*/
 
 
 JsUser.greetingTwo=function(){
-    console.log(`Hello JS user, ${this.name}`);//Hello JS user, Raj
+    console.log(`Hello JS user, ${this.name}`);
 }
-console.log((JsUser.greetingTwo()));//undefined
+console.log((JsUser.greetingTwo()));
+    //output-
+    /*Hello JS user, Raj
+    undefined*/
