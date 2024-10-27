@@ -8,19 +8,19 @@ tinderUser.isLoggedIn=false
 
 const regularUser={
     email:"name@gmail.com",
-    fullname:{
-        userfullname:{
-            firstname:"Raj",
-            lastname:"De Modak"
+    fullName:{
+        userFullName:{
+            firstName:"Raj",
+            lastName:"De Modak"
         }
     }
 }
-// console.log(regularUser.fullname.userfullname.firstname);
+// console.log(regularUser.fullName.userFullName.firstName);
 
 const obj1={1:"a",2:"b"}
 const obj2={3:"a",4:"b"}
 // const obj3={obj1,obj2}//make object within object
-// const obj3=Object.assign(obj1,obj2)//this will also change obj//syntax is (target,source)
+// const obj3=Object.assign(obj1,obj2)//this will also change the original obj//syntax is (target,source)
 // console.log(obj1);
 // console.log(obj3);
 
@@ -28,7 +28,7 @@ const obj4=Object.assign({},obj1,obj2)//target,source,source
 console.log(obj1);
 console.log(obj4);
 
-const obj3={...obj1,...obj2}//easy  symtax(generally used)
+const obj3={...obj1,...obj2}//easy  syntax(generally used)
 console.log(obj3);
 
 const users=[

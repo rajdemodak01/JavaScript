@@ -12,10 +12,10 @@ function calculateCartPrice2(val1,val2,...num1) {///"..." is a rest operator
 
 const user={
     username:"Raj",
-    price:199
+    price:199   
 }
-function handleObject(anyobject){
-    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
 }
 // handleObject(user)
 // handleObject({

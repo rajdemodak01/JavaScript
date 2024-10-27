@@ -5,6 +5,7 @@ function sayMyName(){//function declaration
 }
 
 // sayMyName();//function calling
+//sayMyName//this is only reference of the function
 
 function addTwoNumber(num1,num2){//num1 and num2 are parameters
     console.log(num1+num2);
@@ -38,7 +39,7 @@ function logInUserMessage(username){
 // console.log(logInUserMessage("Raj"));//Raj just logged in
 // console.log(logInUserMessage());//Please enter a username
 
-function logInUserMessage2(username="Shyam"){//default parammeter
+function logInUserMessage2(username="Shyam"){//default parameter
     if (username===undefined) {
         return `Please enter a username`
     }

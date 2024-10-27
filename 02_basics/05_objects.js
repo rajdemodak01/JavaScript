@@ -1,26 +1,32 @@
 const course={
-    coursename:"Learn JS",
+    courseName:"Learn JS",
     price:"999",
-    courseteacher:"Hitesh Chowdhury"
+    courseTeacher:"Hitesh Chowdhury"
 }
 
-// console.log(course.courseteacher);
+// console.log(course.courseTeacher);
 
-// const{courseteacher}=course//object destructuring
-// console.log(courseteacher);
+// const{courseTeacher}=course//object destructuring
+// console.log(courseTeacher);
 
-const{courseteacher:teacher}=course//object destructuring
+const{courseTeacher:teacher}=course//object destructuring
 console.log(teacher);
 
-// const navbar=({company})=>{
+
+
+// const navbar=({company})=>{//destructing props
 
 // }
 // navbar(company="Raj")//react part
 
+
+
 //API
+//after api call JSON structure is returned from backend
+//the structure is--(both key and value is string)
 // {
 //     "name":"Raj De Modak",
-//     "coursename":"Learn FullStack",
+//     "courseName":"Learn FullStack",
 //     "price":"free"
 // }
 
