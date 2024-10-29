@@ -20,7 +20,7 @@ function one(){
         const website="youtube"
         console.log(username);
     }
-    // console.log(website);
+    // console.log(website);//error
 
     two()
 }

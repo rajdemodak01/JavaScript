@@ -1,5 +1,5 @@
 //if
-const isuserloggedin=true
+const isUserLoggedIn=true
 const temperature=41
 // if(temperature<50){
 //     console.log("Less than 50");
@@ -8,7 +8,7 @@ const temperature=41
 // }
 // if(true){
 // }
-// if(isuserloggedin){
+// if(isUserLoggedIn){
 // }
 // if(2==2){
 //     console.log("executed")
@@ -21,13 +21,14 @@ const temperature=41
 //     const power="fly"
 //     console.log(`user power:${power}`);
 // }
-// console.log(`user power:${power}`);//out of scope
+// console.log(`user power:${power}`);//"power" is out of scope
 
-// <,>,<=,>=,==,!=,===,!==
+// <,>,<=,>=,==,!=,===,!==//comparison operator
+//===(also check the type)
 
 
 const balance=1000
-// if(balance>500) console.log("test")//short hand notation
+// if(balance>500) console.log("test")//short hand notation//only for single line body(This is not a good practice)
 
 // if(balance<500){
 //     console.log("Less than 500");
@@ -44,7 +45,7 @@ const debitCard=true
 const loggedInFromGoogle=false
 const loggedInFromEmail=true
 if(userLoggedIn && debitCard){
-    console.log("Alllowed to buy course")
+    console.log("Allowed to buy course")
 }
 if(loggedInFromEmail||loggedInFromGoogle){
     console.log("User Logged in ");

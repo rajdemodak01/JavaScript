@@ -12,14 +12,14 @@ user.username="Shyam"
 user.welcomeMessage()
 console.log(user.username);
 
-// console.log(this);//{}
+console.log(this);//{}
 
 function func(){
     let username="Raj De Modak"
     console.log(this.username);
     // console.log(this);
 }
-func()//undefined
+// func()//undefined
 
 // const result=function(){
 //     let username="Raj De Modak"
@@ -45,7 +45,7 @@ const addThree=(num1,num2,num3)=> num1+num2+num3//implicit return(we do not use 
 // console.log(addThree(2,4,6));
 
 const objectReturn=(num1,num2)=>({username:"Raj"})//note here we are using first bracket(normally we use curly braces)
-console.log(objectReturn(1,2));//{ username: 'Raj' }
+// console.log(objectReturn(1,2));//{ username: 'Raj' }
 
 const myArray=[1,2,5,3,5]
 // myArray.forEach(()=>{return })

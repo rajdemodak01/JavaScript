@@ -1,11 +1,11 @@
-const myNums = [1, 2, 3]
+const myNum = [1, 2, 3]
 
-// const myTotal = myNums.reduce(function (acc, currval) {
-//     console.log(`acc: ${acc} and currval: ${currval}`);
-//     return acc + currval
+// const myTotal = myNum.reduce(function (acc, currVal) {
+//     console.log(`acc: ${acc} and currVal: ${currVal}`);
+//     return acc + currVal
 // }, 0)
 
-const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)//0+1+2+3=6
+const myTotal = myNum.reduce( (acc, curr) => acc+curr, 0)//0+1+2+3=6
 //syntax--> const var_name=arr.reduce(function,0)//0 means the starting value of acc=0
 //if we put 5 instead of 0, answer will be 11//5+1+2+3
 
