@@ -8,21 +8,21 @@
 
 // console.log(values);
 
-const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const myNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// const newNums = myNums.filter( (num) => {
+// const newNum = myNum.filter( (num) => {
 //     return num > 4
 // } )
 
-// const newNums = []
+// const newNum = []
 
-// myNums.forEach( (num) => {
+// myNum.forEach( (num) => {
 //     if (num > 4) {
-//         newNums.push(num)
+//         newNum.push(num)
 //     }
 // } )
 
-// console.log(newNums);
+// console.log(newNum);
 
 
 const books = [

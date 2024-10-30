@@ -22,5 +22,5 @@ for (const key in programming) {
 // map.set('IN', "India")
 
 // for (const key in map) {
-//     console.log(key);
+//     console.log(key);//can't be iterable like this
 // }
